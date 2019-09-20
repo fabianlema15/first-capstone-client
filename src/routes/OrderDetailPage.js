@@ -49,6 +49,7 @@ class OrderDetailPage extends React.Component{
 
     GenericApiService.getAll('products')
       .then(result => {
+        this.productsListOrder = Helper.serializeObj(result)
         this.productsList = result.map(product => {
           return {
             id: product.id,
@@ -57,6 +58,7 @@ class OrderDetailPage extends React.Component{
       })
       .then(() => GenericApiService.getAll('promotions'))
       .then(result => {
+        this.promotionsListOrder = Helper.serializeObj(result)
         this.promotionsList = result.map(promotion => {
           return {
             id: promotion.id,
@@ -263,6 +265,8 @@ class OrderDetailPage extends React.Component{
       getObjArrayProm: Helper.getOrderPromotionArray(this.promotionsList),
       objName: 'Order Detail',
       currentOrder: this.state.currentOrder,
+      productsListOrder: this.productsListOrder,
+      promotionsListOrder: this.promotionsListOrder,
     }
 
     return (

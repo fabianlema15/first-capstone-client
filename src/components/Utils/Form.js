@@ -23,10 +23,35 @@ export default class Form extends Component {
     if (this.context.error) this.context.clearError()
     const input = e.target.id;
     const value = e.target.value;
-    //console.log(input, value)
-    this.setState({
-      [input]: value
-    })
+    if (this.context.objName === 'Order Detail'){
+      if (input==='product_id'){
+        this.setState({
+          [input]: value,
+          quantity: 1,
+          price: (1 * this.context.productsListOrder[value].price)
+        })
+      }else if (input==='promotion_id'){
+        this.setState({
+          [input]: value,
+          quantity: 1,
+          price: (1 * this.context.promotionsListOrder[value].price)
+        })
+      }else if (input==='quantity'){
+        this.setState({
+          [input]: value,
+          price: (value * (this.context.promotionsListOrder[this.state.product_id] ? this.context.promotionsListOrder[this.state.product_id].price : this.context.promotionsListOrder[this.state.promotion_id].price))
+        })
+      }else if (input==='price'){
+      }else{
+        this.setState({
+          [input]: value
+        })
+      }
+    }else{
+      this.setState({
+        [input]: value
+      })
+    }
   }
 
   render() {

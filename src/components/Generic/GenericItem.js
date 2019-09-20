@@ -22,7 +22,7 @@ class GenericItem extends React.Component{
   getItemContent = (classDiv = 'item-description') => {
     return Object.keys(this.props.objLabel).map((key, idx) => key!=='picture' ? <div key={idx} className={classDiv}>
           <div><span>{this.props.objLabel[key].label}:</span>
-          </div> <div>{this.createText(key)}</div>
+          </div><div>{this.createText(key)}</div>
        </div> : '')
   }
 
@@ -37,6 +37,10 @@ class GenericItem extends React.Component{
           <button className='green' onClick={e => this.context.setSelected(this.props.obj.id)}>Edit</button>
           </div>
         </div> : <div>
+          {this.context.objName==='User' && <div className='item-description'>
+                <div><span>User Code:</span>
+                </div><div>{this.props.obj.user_code}</div>
+             </div>}
           {this.getItemContent()}
           <button className='red' onClick={e => this.context.delete(this.props.obj.id)}>Delete</button>
           <button className='green' onClick={e => this.context.setSelected(this.props.obj.id)}>Edit</button>

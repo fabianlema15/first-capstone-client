@@ -4,6 +4,7 @@ import './Menu.css'
 import Helper from '../Utils/Helper'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
+import menuImage from '../../images/menu_icon.png'
 
 class Menu extends React.Component {
 
@@ -50,7 +51,7 @@ class Menu extends React.Component {
       if (Helper.roleHasAccess(decoded.role, menu.path))
         return <div key={idx} className='main-item'> <div className='menu-item'>
         {menu.label}
-          <button className='border-gray' onClick={e => this.redirectTo(menu.path)} ><img src='/menu_icon.png' alt={menu.label}></img></button>
+          <button className='border-gray' onClick={e => this.redirectTo(menu.path)} ><img src={menuImage} alt={menu.label}></img></button>
         </div></div>
       else
       return '';
@@ -65,13 +66,13 @@ class Menu extends React.Component {
               <div className='main-item'>
                 <div className='menu-item'>
                   Change Password
-                  <button className='border-gray' onClick={this.changePassword} ><img src='/menu_icon.png' alt='Icon'></img></button>
+                  <button className='border-gray' onClick={this.changePassword} ><img src={menuImage} alt='Icon'></img></button>
                 </div>
               </div>
             <div className='main-item'>
               <div className='menu-item'>
                 Logout
-                <button className='border-gray' onClick={this.handleLogoutClick} ><img src='/menu_icon.png' alt='Icon'></img></button>
+                <button className='border-gray' onClick={this.handleLogoutClick} ><img src={menuImage} alt='Icon'></img></button>
               </div>
             </div>
           </section>
