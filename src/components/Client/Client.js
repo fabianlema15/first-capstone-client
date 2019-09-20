@@ -3,9 +3,8 @@ import GenericNew from '../Generic/GenericNew';
 import GenericList from '../Generic/GenericList';
 import GenericContext from '../../contexts/GenericContext'
 import Header from '../Header/Header'
-import './User.css'
 
-class User extends React.Component{
+class Client extends React.Component{
   static contextType = GenericContext;
 
   componentDidMount() {
@@ -13,19 +12,10 @@ class User extends React.Component{
     this.context.getAll()
   }
 
-  acceptCode = () => {
-    this.context.acceptCode();
-  }
-
   render(){
-    const currentUser = this.context.currentUser;
     return <div>
         <Header />
       <main className='content-with-nav'>
-        {currentUser && <section>
-          {currentUser.last_name + ' ' + currentUser.first_name} code is <span className='user-code'>{currentUser.user_code}</span>
-          <p><button className='green' onClick={this.acceptCode}>OK</button></p>
-        </section>}
         <section>
           {this.context.showForm && <GenericNew />}
           {!this.context.showForm && <button className='blue' onClick={e => this.context.showHideForm(!this.context.showForm)}>Add</button>}
@@ -39,4 +29,4 @@ class User extends React.Component{
   }
 }
 
-export default User;
+export default Client;

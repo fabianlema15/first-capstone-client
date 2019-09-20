@@ -1,0 +1,16 @@
+
+.back-nav {
+  top: 15px;
+  left: 0;
+  width: 20%;
+  position: fixed;
+}
+
+.name-nav {
+  top: -15px;
+  right: 0;
+  position: fixed;
+  width: 70%;
+  text-align: center;
+  color: white;
+}
