@@ -77,7 +77,7 @@ class OrderDetailPage extends React.Component{
   }
 
   setCurrentOrder = currentOrder => {
-    console.log(currentOrder);
+    //console.log(currentOrder);
     this.setState({ currentOrder })
   }
 
@@ -177,7 +177,7 @@ class OrderDetailPage extends React.Component{
 
   submitNewOrder = (newOrderDetail) => {
     newOrderDetail.user_id = TokenService.decodeUser().user_id;
-    console.log(newOrderDetail);
+    //console.log(newOrderDetail);
     GenericApiService.saveNew(this.props.ROUTE, newOrderDetail)
       .then(this.setCurrentOrder)
       .catch(this.setError)

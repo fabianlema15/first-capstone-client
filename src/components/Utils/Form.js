@@ -39,7 +39,7 @@ export default class Form extends Component {
       }else if (input==='quantity'){
         this.setState({
           [input]: value,
-          price: (value * (this.context.promotionsListOrder[this.state.product_id] ? this.context.promotionsListOrder[this.state.product_id].price : this.context.promotionsListOrder[this.state.promotion_id].price))
+          price: (value * (this.context.productsListOrder[this.state.product_id] ? this.context.productsListOrder[this.state.product_id].price : this.context.promotionsListOrder[this.state.promotion_id].price))
         })
       }else if (input==='price'){
       }else{
