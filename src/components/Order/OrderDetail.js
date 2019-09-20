@@ -13,7 +13,7 @@ class OrderDetail extends React.Component{
     tax: 0,
     total: 0,
     observation: '',
-    client_id: null
+    client_id: ''
   }
 
   componentDidMount() {
@@ -31,9 +31,9 @@ class OrderDetail extends React.Component{
   }
 
   submitNewOrder = (e) => {
-    const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
+    //const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
     const newOrderDetail = {
-      client_id: idClient,
+      client_id: this.state.client_id,
       subtotal: this.state.subtotal,
       tax: this.state.tax,
       total: this.state.total,
@@ -44,13 +44,13 @@ class OrderDetail extends React.Component{
 
   render(){
     //console.log(this.context.getClientsObj && this.context.getClientsObj[0].id);
-    const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
+    //const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
     //console.log(typeof idClient);
     return <div>
       <Header back='/orders' />
     <main className='content-with-nav'>
         <section>
-          <Select id='client_id' value={idClient} label='Client' onChange={this.handleInputChange} options={this.context.getClientsObj}/>
+          <Select id='client_id' value={this.context.currentOrder?this.context.currentOrder.client_id:this.state.client_id} label='Client' onChange={this.handleInputChange} options={this.context.getClientsObj}/>
           <Textarea id='observation' value={this.state.observation} label='Observation' onChange={this.handleInputChange}/>
           {!this.context.currentOrder && <button className='blue' onClick={this.submitNewOrder}>Create and Save</button>}
           {(!this.context.showForm && this.context.currentOrder) && <div>

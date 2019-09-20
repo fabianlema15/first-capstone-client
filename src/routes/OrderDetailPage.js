@@ -22,14 +22,14 @@ class OrderDetailPage extends React.Component{
 
   componentDidMount() {
     const { orderId } = this.props.match.params
-    console.log(orderId);
+    //console.log(orderId);
     if (orderId && orderId!=='new'){
       Promise.all([
         GenericApiService.getById('orders', orderId),
         GenericApiService.getAll(`orders/${orderId}/products`),
         GenericApiService.getAll(`orders/${orderId}/promotions`)
       ]).then(values =>{
-        console.log(values)
+        //console.log(values)
         this.setState({
           currentOrder: values[0],
           objList: Helper.serializeObj(values[1]),

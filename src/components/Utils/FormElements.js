@@ -29,6 +29,7 @@ function Select({ className, label, idx, id, options=[], ...props }) {
     <label key={idx} htmlFor={id}>
       {label}
       <select id={id} required className={['Textarea', className].join(' ')} {...props}>
+        <option value=''>--SELECT ONE OPTION--</option>
         {getOptions}
       </select>
     </label>
