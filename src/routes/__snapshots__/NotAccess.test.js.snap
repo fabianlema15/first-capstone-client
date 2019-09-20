@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotAccessPage /> Renders NotAccessPage as expected 1`] = `
+<section>
+  <h2>
+    No Access
+  </h2>
+  <p>
+    You role does not have access to this page.
+  </p>
+</section>
+`;

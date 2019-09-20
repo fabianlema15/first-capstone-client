@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportPage /> Renders ReportPage as expected 1`] = `
+<div>
+  <nav>
+    <div
+      className="back-nav"
+    >
+      <a
+        href="/menu"
+        onClick={[Function]}
+      >
+        Back
+      </a>
+    </div>
+    <div
+      className="name-nav"
+    >
+      <h2>
+        Report
+        s
+      </h2>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
+      <form
+        onSubmit={[Function]}
+      >
+        <h3>
+          Reports
+        </h3>
+        <fieldset>
+          <label
+            htmlFor="from"
+          >
+            From
+            <input
+              className="Input "
+              id="from"
+              onChange={[Function]}
+              required={true}
+              type="date"
+              value=""
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label
+            htmlFor="to"
+          >
+            to
+            <input
+              className="Input "
+              id="to"
+              onChange={[Function]}
+              required={true}
+              type="date"
+              value=""
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label
+            htmlFor="user_id"
+          >
+            User
+            <select
+              className="Textarea "
+              id="user_id"
+              onChange={[Function]}
+              required={true}
+              value=""
+            >
+              <option
+                value=""
+              >
+                --SELECT ONE OPTION--
+              </option>
+            </select>
+          </label>
+        </fieldset>
+        <button
+          className="green"
+          type="submit"
+        >
+          Get Report
+        </button>
+      </form>
+    </section>
+    <section>
+      <div>
+        You have no orders in this report
+      </div>
+    </section>
+  </main>
+</div>
+`;

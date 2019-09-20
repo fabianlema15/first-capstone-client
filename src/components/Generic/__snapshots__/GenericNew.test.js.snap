@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenericNew /> Renders GenericNew as expected 1`] = `
+<form>
+  <h3>
+    New undefined
+  </h3>
+  
+  <div>
+    <button
+      className="blue"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      className="orange"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<GenericNew /> With Context 1`] = `
+<Form
+  actionCancel={[Function]}
+  inputs={Array []}
+  type="New undefined"
+/>
+`;
+
+exports[`<ProductPage /> Renders ProductPage as expected 1`] = `
+<form>
+  <h3>
+    New undefined
+  </h3>
+  
+  <div>
+    <button
+      className="blue"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      className="orange"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<ProductPage /> With Context 1`] = `
+<Form
+  actionCancel={[Function]}
+  inputs={Array []}
+  type="New undefined"
+/>
+`;

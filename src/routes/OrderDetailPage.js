@@ -21,7 +21,7 @@ class OrderDetailPage extends React.Component{
   };
 
   componentDidMount() {
-    const { orderId } = this.props.match.params
+    const { orderId } = this.props.match ? this.props.match.params : 'new'
     //console.log(orderId);
     if (orderId && orderId!=='new'){
       Promise.all([

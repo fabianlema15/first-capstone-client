@@ -64,9 +64,10 @@ class OrderPage extends React.Component{
   }
 
   getAll = () => {
-    GenericApiService.getAll(`${this.props.ROUTE}/byuser/${TokenService.decodeUser().user_id}`)
-      .then(result => this.setOrderList(Helper.serializeObj(result)))
-      .catch(this.setError)
+    if (TokenService.decodeUser())
+      GenericApiService.getAll(`${this.props.ROUTE}/byuser/${TokenService.decodeUser().user_id}`)
+        .then(result => this.setOrderList(Helper.serializeObj(result)))
+        .catch(this.setError)
   }
 
   submitNew = (e) => {

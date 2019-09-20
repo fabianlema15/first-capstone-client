@@ -56,7 +56,7 @@ export default class Form extends Component {
 
   render() {
     const {type, elements, actionSubmit, actionCancel, obj, readonly=false} = this.props;
-    const inputsJSX = this.generateElements(elements, readonly)
+    const inputsJSX = elements? this.generateElements(elements, readonly) : ''
 
     return (
       <form onSubmit={actionSubmit}>

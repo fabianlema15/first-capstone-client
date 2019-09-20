@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductPage /> Renders ProductPage as expected 1`] = `
+<div>
+  <nav>
+    <div
+      className="back-nav"
+    >
+      <a
+        href="/menu"
+        onClick={[Function]}
+      >
+        Back
+      </a>
+    </div>
+    <div
+      className="name-nav"
+    >
+      <h2>
+        Product
+        s
+      </h2>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
+      <button
+        className="blue"
+        onClick={[Function]}
+      >
+        Add
+      </button>
+    </section>
+    <section>
+      <div>
+        You still have no Products added
+      </div>
+    </section>
+  </main>
+</div>
+`;

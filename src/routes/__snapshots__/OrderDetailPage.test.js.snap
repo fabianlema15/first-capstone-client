@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderDetailPage /> Renders OrderDetailPage as expected 1`] = `
+<div>
+  <nav>
+    <div
+      className="back-nav"
+    >
+      <a
+        href="/orders"
+        onClick={[Function]}
+      >
+        Back
+      </a>
+    </div>
+    <div
+      className="name-nav"
+    >
+      <h2>
+        Order Detail
+        s
+      </h2>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
+      <fieldset>
+        <label
+          htmlFor="client_id"
+        >
+          Client
+          <select
+            className="Textarea "
+            id="client_id"
+            onChange={[Function]}
+            required={true}
+            value=""
+          >
+            <option
+              value=""
+            >
+              --SELECT ONE OPTION--
+            </option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label
+          htmlFor="observation"
+        >
+          Observation
+          <textarea
+            className="Textarea "
+            id="observation"
+            onChange={[Function]}
+            value=""
+          />
+        </label>
+      </fieldset>
+      <button
+        className="blue"
+        onClick={[Function]}
+      >
+        Create and Save
+      </button>
+    </section>
+    <section>
+      You still have no products added
+    </section>
+    <section>
+      <div
+        className="item-description"
+      >
+        <div>
+          <span>
+            Subtotal:
+          </span>
+        </div>
+        <div>
+          0
+        </div>
+        <div>
+          <span>
+            Tax:
+          </span>
+        </div>
+        <div>
+          0
+        </div>
+        <div>
+          <span>
+            Total:
+          </span>
+        </div>
+        <div>
+          0
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+`;

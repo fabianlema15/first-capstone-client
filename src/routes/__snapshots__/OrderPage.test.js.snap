@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderPage /> Renders OrderPage as expected 1`] = `
+<div>
+  <nav>
+    <div
+      className="back-nav"
+    >
+      <a
+        href="/menu"
+        onClick={[Function]}
+      >
+        Back
+      </a>
+    </div>
+    <div
+      className="name-nav"
+    >
+      <h2>
+        Order
+        s
+      </h2>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
+      <a
+        href="/orders/new"
+        onClick={[Function]}
+      >
+        Create New Order
+      </a>
+    </section>
+    <section>
+      <div>
+        You still have no Orders added
+      </div>
+    </section>
+  </main>
+</div>
+`;

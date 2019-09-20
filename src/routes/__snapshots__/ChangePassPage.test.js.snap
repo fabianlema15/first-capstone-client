@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChangePassPage /> Renders ChangePassPage as expected 1`] = `
+<div>
+  <nav>
+    <div
+      className="back-nav"
+    >
+      <a
+        href="/menu"
+        onClick={[Function]}
+      >
+        Back
+      </a>
+    </div>
+    <div
+      className="name-nav"
+    >
+      <h2>
+        Change Pas
+        s
+      </h2>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
+      <form
+        onSubmit={[Function]}
+      >
+        <h3>
+          Change Password
+        </h3>
+        <fieldset>
+          <label
+            htmlFor="password"
+          >
+            Password
+            <input
+              className="Input "
+              id="password"
+              onChange={[Function]}
+              required={true}
+              type="password"
+              value=""
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label
+            htmlFor="password_rep"
+          >
+            Repeat Password
+            <input
+              className="Input "
+              id="password_rep"
+              onChange={[Function]}
+              required={true}
+              type="password"
+              value=""
+            />
+          </label>
+        </fieldset>
+        <button
+          className="green"
+          type="submit"
+        >
+          Change Password
+        </button>
+      </form>
+    </section>
+  </main>
+</div>
+`;
