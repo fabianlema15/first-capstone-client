@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import MenuPage from '../../routes/MenuPage'
 import UserPage from '../../routes/UserPage'
 import ClientPage from '../../routes/ClientPage'
@@ -79,6 +79,7 @@ class App extends React.Component {
     return (
         <div className="App">
           <Switch>
+            <Route exact path="/"><Redirect to="/login" /></Route>,
             <PrivateRoute exact path="/menu" component={MenuPage} />
             <PrivateRoute exact path="/products" component={ProductPage} />
             <PrivateRoute exact path="/clients" component={ClientPage} />
