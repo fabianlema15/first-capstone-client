@@ -60,8 +60,8 @@ class Login extends React.Component{
   createButtons = () => {
     let buttonsHtml = [];
     for (let i = 0; i < 10; i++){
-      if (i===9) buttonsHtml.push(<button key={i} className='gray' onClick={e => this.clickNumber(0)}>0</button>)
-      else buttonsHtml.push(<button key={i} className='gray' onClick={e => this.clickNumber(i+1)}>{i+1}</button>)
+      if (i===9) buttonsHtml.push(<button key={i} className='gray' onClick={e => this.clickNumber(0)}><span>0</span></button>)
+      else buttonsHtml.push(<button key={i} className='gray' onClick={e => this.clickNumber(i+1)}><span>{i+1}</span></button>)
     }
     return buttonsHtml;
   }

@@ -24,7 +24,7 @@ class OrderPromotionItem extends React.Component{
   }
 
   render(){
-    return <div>
+    return <div className="item-list">
       {this.props.obj.selected ? <Form type={`Edit ${this.context.objName}`} elements={this.context.getObjArrayProm} obj={this.props.obj} actionSubmit={this.context.submitPromotionEdit} actionCancel={this.cancelSubmit} /> :
         <div>{this.getItemContent()}
         <button className='red' onClick={e => this.context.delete(this.props.obj.id, 2)}>Delete</button>

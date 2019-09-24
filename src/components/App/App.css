@@ -156,6 +156,14 @@ input, textarea, select {
 .item-description span, .item-description-p span{
   color: gray;
 }
+
+@media screen and (min-width: 700px) {
+  fieldset {
+    width: 450px;
+    margin: auto;
+  }
+}
+
 /*
 @media screen and (max-width: 570px) {
   label {

@@ -20,3 +20,18 @@ section {
 .main-item img {
   width: 70%;
 }
+
+
+@media screen and (min-width: 570px) {
+  .main-item{
+    width: 28%;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .main-item{
+    width: 20%;
+  }
+
+}

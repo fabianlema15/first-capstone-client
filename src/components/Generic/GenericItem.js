@@ -3,7 +3,7 @@ import GenericContext from '../../contexts/GenericContext'
 import Form from '../Utils/Form'
 import { ColoredLine } from '../Utils/FormElements'
 import config from '../../config'
-
+import './GenericItem.css'
 
 class GenericItem extends React.Component{
   static contextType = GenericContext;
@@ -27,7 +27,7 @@ class GenericItem extends React.Component{
   }
 
   render(){
-    return <div>
+    return <div className="item-list">
       {this.props.obj.selected ? <Form type={`Edit ${this.context.objName}`} elements={this.context.getObjArray} obj={this.props.obj} actionSubmit={this.context.submitEdit} actionCancel={this.cancelSubmit} /> :
         <div>
         {(this.context.objName==='Product' || this.context.objName==='Promotion') ? <div className='div-w-picture'>

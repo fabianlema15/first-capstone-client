@@ -5,7 +5,32 @@
 
 .numbers-panel button{
   margin: 5px;
-  width: 100px;
-  height: 100px;
+  width: 30%;
+  padding-top: 20%;
   font-size: 30px;
+  position: relative;
+}
+
+.numbers-panel span {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 570px) {
+  .numbers-panel button{
+    width: 20%;
+    padding-top: 15%;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .numbers-panel button{
+    width: 15%;
+    padding-top: 10%;
+  }
+
 }
