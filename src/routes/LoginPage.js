@@ -1,6 +1,6 @@
 import React from 'react';
 import GenericContext from '../contexts/GenericContext'
-import LoginContent from '../components/Login/Login'
+import LoginContent from '../components/Login/RegularLogin'
 import GenericApiService from '../services/generic-api-service';
 import AuthApiService from '../services/auth-api-service';
 
@@ -17,13 +17,8 @@ class LoginPage extends React.Component{
     this.setState({ userCode })
   }
 
-
-  setLoginList = objList => {
-    this.setState({ objList })
-  }
-
   setError = error => {
-    this.setState({ error: error.error })
+    this.setState({ error: error.error, loading: false })
   }
 
   clearError = () => {
@@ -52,15 +47,29 @@ class LoginPage extends React.Component{
       .catch(this.setError)
   }
 
+  submitLogin = e => {
+    e.preventDefault();
+    this.setState({loading: true})
+    const { user_code, password } = e.target;
+    const loginData = {
+      user_code: user_code.value,
+      password: password.value,
+    }
+    AuthApiService.login(loginData)
+      .then(result => {
+        this.props.history.push(`/menu`)
+      })
+      .catch(this.setError)
+  }
+
   render() {
     const value = {
       clearError: this.clearError,
-      userCode: this.state.userCode,
-      setUserCode: this.setUserCode,
       error: this.state.error,
-      checkUserCode: this.checkUserCode,
-      checkLogin: this.checkLogin,
-      setError: this.setError
+      submitLogin: this.submitLogin,
+      setError: this.setError,
+      loading: this.state.loading,
+      objName: 'Log In',
     }
 
     return (

@@ -2,6 +2,10 @@
 
 This app should be used by any liquor store to sell different kinds of liquor, get reports about every sell and day. Also, we can get the maintenance of products, clients, and users.
 
+## Demo
+
+Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
+
 ## Funtionalities
 
 1. There are 3 roles: admin, manager, and seller.
@@ -53,9 +57,6 @@ This app should be used by any liquor store to sell different kinds of liquor, g
 
 ![App Image](/images/8.png)
 
-## Demo
-
-Click on the next link: [Demo](https://fabian-liquor-app.now.sh/login)
 
 ## Access
 

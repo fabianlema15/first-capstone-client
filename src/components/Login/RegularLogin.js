@@ -2,13 +2,14 @@ import React from 'react';
 import { Input } from '../Utils/FormElements';
 import GenericContext from '../../contexts/GenericContext';
 import Header from '../Header/Header'
+import { Link } from 'react-router-dom';
 
-class ChangePassword extends React.Component{
+class RegularLogin extends React.Component{
   static contextType = GenericContext;
 
   state = {
+    user_code: '',
     password: '',
-    password_rep: '',
   }
 
   handleInputChange = e => {
@@ -23,19 +24,26 @@ class ChangePassword extends React.Component{
 
   render(){
     return <div>
-        <Header />
+        <Header notBack={true}/>
       <main className='content-with-nav'>
       {this.context.error && <section><div className='errorMsg'>{this.context.error}</div></section>}
       <section>
-        <form onSubmit={this.context.changePassword}>
+        <h4>Insert credentials provided by your manager</h4>
+        <form onSubmit={this.context.submitLogin}>
+          <Input id='user_code' value={this.state.user_code} label='User Code' type='number' onChange={this.handleInputChange}/>
           <Input id='password' value={this.state.password} label='Password' type='password' onChange={this.handleInputChange}/>
-          <Input id='password_rep' value={this.state.password_rep} label='Repeat Password' type='password' onChange={this.handleInputChange}/>
-          {!this.context.changed ? <button className='green' type='submit'>Change Password</button> : <div>Password changed</div>}
+          <Link to='/'>Cancel</Link>
+          {!this.context.changed ? <button className='green' type='submit'>Log In</button> : <div>Password changed</div>}
         </form>
+        <section>
+          <div className="title-box">Demo access</div>
+          <div>User Code: 202033</div>
+          <div>Password: 202033</div>
+        </section>
       </section>
     </main>
     </div>
   }
 }
 
-export default ChangePassword;
+export default RegularLogin;

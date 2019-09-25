@@ -39,7 +39,7 @@ class ChangePassPage extends React.Component{
       error: this.state.error,
       changePassword: this.changePassword,
       setError: this.setError,
-      objName: 'Change Pas',
+      objName: 'Change Password',
       changed: this.state.changed
     }
 

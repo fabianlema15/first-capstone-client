@@ -8,11 +8,14 @@ class Product extends React.Component{
 
   render(){
     return <nav>
-      <div className='back-nav'><Link
-        to={this.props.back || '/menu'}>
-        Back
-      </Link></div>
-      <div className='name-nav'><h2>{this.context.objName}s</h2></div>
+      {!this.props.notBack && <div className='back-nav'>
+        <Link
+          to={this.props.back || '/menu'}>
+          Back
+        </Link>
+      </div>}
+      <div className='name-nav'><h1>{this.context.objName}</h1></div>
+      {this.context.loading && <div className="loading">Loading..</div> }
     </nav>
   }
 }

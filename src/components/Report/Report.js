@@ -15,7 +15,7 @@ class Report extends React.Component{
   }
 
   handleInputChange = e => {
-    if (this.context.error) this.context.clearError();
+    if (this.context.error || this.context.msg) this.context.clearError();
     const input = e.target.id;
     const value = e.target.value;
     this.setState({
@@ -31,19 +31,20 @@ class Report extends React.Component{
       <section>
         <form onSubmit={this.context.getReport}>
           <h3>Reports</h3>
-          <Input id='from' value={this.state.from} label='From' type='date' onChange={this.handleInputChange}/>
-          <Input id='to' value={this.state.to} label='to' type='date' onChange={this.handleInputChange}/>
+          <Input id='from' value={this.state.from} label='From' placeholder="Ex: 01/20/2019" type='date' onChange={this.handleInputChange}/>
+          <Input id='to' value={this.state.to} label='To' placeholder="Ex: 12/31/2019" type='date' onChange={this.handleInputChange}/>
           <Select id='user_id' value={this.state.user_id} label='User' onChange={this.handleInputChange} options={this.context.userList}/>
           <button className='green' type='submit'>Get Report</button>
         </form>
       </section>
+      {this.context.msg && <section><div className='msgMsg'>{this.context.msg}</div></section>}
       <section>
         <ReportList />
       </section>
       {this.context.error && <section><div className='errorMsg'>{this.context.error}</div></section>}
       {Object.keys(this.context.orderList).length>0 && <section><div>
         <Input id='mail_to' value={this.state.mail_to} label='Send by email to' type='mail' onChange={this.handleInputChange}/>
-        <button type='button' className='blue' onClick={e => this.context.sendMail(this.state)}>Send email</button>
+        {!this.context.msgResponse && <button type='button' className='blue' onClick={e => this.context.sendMail(this.state)}>Send email</button>}
         </div><div>{this.context.msgResponse}</div></section>}
     </main>
     </div>

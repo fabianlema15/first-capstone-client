@@ -24,6 +24,7 @@ class OrderDetailPage extends React.Component{
     const { orderId } = this.props.match ? this.props.match.params : 'new'
     //console.log(orderId);
     if (orderId && orderId!=='new'){
+      this.setState({loading: true})
       Promise.all([
         GenericApiService.getById('orders', orderId),
         GenericApiService.getAll(`orders/${orderId}/products`),
@@ -33,7 +34,8 @@ class OrderDetailPage extends React.Component{
         this.setState({
           currentOrder: values[0],
           objList: Helper.serializeObj(values[1]),
-          objListAux: Helper.serializeObj(values[2])
+          objListAux: Helper.serializeObj(values[2]),
+          loading: false
         })
       }).catch(this.setError);
     }
@@ -82,7 +84,7 @@ class OrderDetailPage extends React.Component{
   }
 
   setError = error => {
-    this.setState({ error: error.error.message || error.error })
+    this.setState({ error: error.error.message || error.error, loading: false })
   }
 
   clearError = () => {
@@ -267,6 +269,7 @@ class OrderDetailPage extends React.Component{
       currentOrder: this.state.currentOrder,
       productsListOrder: this.productsListOrder,
       promotionsListOrder: this.promotionsListOrder,
+      loading: this.state.loading,
     }
 
     return (

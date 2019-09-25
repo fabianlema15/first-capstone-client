@@ -14,3 +14,17 @@
   text-align: center;
   color: white;
 }
+
+
+a{
+  color: black;
+}
+
+.loading {
+  background-color: #555555BB;
+  color: white;
+  border-radius: 5px;
+  padding: 30px;
+  position: absolute;
+  right: 5px;
+}

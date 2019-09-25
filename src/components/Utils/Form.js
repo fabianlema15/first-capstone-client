@@ -77,7 +77,8 @@ export default class Form extends Component {
       const valueElm = this.state[element.id] || '';
       switch (element.element) {
         case 'input':
-          returValue = <Input key={idx} id={element.id} value={valueElm} label={element.label} type={element.type} onChange={this.handleInputChange} readOnly={readOnly}/>
+          returValue = element.type!=='decimal' ? <Input key={idx} id={element.id} value={valueElm} label={element.label} type={element.type} onChange={this.handleInputChange} readOnly={readOnly}/>
+            : <Input key={idx} id={element.id} value={valueElm} label={element.label} type='number' step="0.01" onChange={this.handleInputChange} readOnly={readOnly}/>
           break;
         case 'textarea':
           returValue = <Textarea key={idx} id={element.id} value={valueElm} label={element.label} onChange={this.handleInputChange} readOnly={readOnly}/>

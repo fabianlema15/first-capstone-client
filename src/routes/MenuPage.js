@@ -59,7 +59,8 @@ class MenuPage extends React.Component{
       setUserCode: this.setUserCode,
       error: this.state.error,
       checkUserCode: this.checkUserCode,
-      checkMenu: this.checkMenu
+      checkMenu: this.checkMenu,
+      objName: 'Main Menu',
     }
 
     return (

@@ -5,6 +5,7 @@ import Helper from '../Utils/Helper'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
 import menuImage from '../../images/menu_icon.png'
+import Header from '../Header/Header'
 
 class Menu extends React.Component {
 
@@ -61,7 +62,9 @@ class Menu extends React.Component {
   )}
 
  render(){
-   return <main>
+   return <div>
+       <Header notBack={true}/>
+       <main className='content-with-nav'>
           <section>
               {this.getMenus()}
               <div className='main-item'>
@@ -78,6 +81,7 @@ class Menu extends React.Component {
             </div>
           </section>
         </main>
+      </div>
  }
 }
 

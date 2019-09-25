@@ -4,7 +4,7 @@ const Helper = {
       {element: 'input', type: 'text', id: 'name', label:'Name'},
       {element: 'file', type: 'file', id: 'picture', label:'Picture'},
       {element: 'input', type: 'number', id: 'stock', label:'Stock'},
-      {element: 'input', type: 'number', id: 'price', label:'Price'},
+      {element: 'input', type: 'decimal', id: 'price', label:'Price'},
       {element: 'textarea', id: 'description', label:'Decription'},
     ]
   },
@@ -31,7 +31,7 @@ const Helper = {
       {element: 'input', type: 'text', id: 'name', label:'Name'},
       {element: 'file', type: 'file', id: 'picture', label:'Picture'},
       {element: 'input', type: 'number', id: 'stock', label:'Stock'},
-      {element: 'input', type: 'number', id: 'price', label:'Price'},
+      {element: 'input', type: 'decimal', id: 'price', label:'Price'},
       {element: 'textarea', id: 'description', label:'Description'},
     ]
   },
@@ -44,9 +44,9 @@ const Helper = {
   getOrdersArray(options){
     return [
       {element: 'select', id: 'client_id', label:'Client', options:options},
-      {element: 'input', type: 'number', id: 'subtotal', label:'Subtotal'},
-      {element: 'input', type: 'number', id: 'tax', label:'Tax'},
-      {element: 'input', type: 'number', id: 'total', label:'Total'},
+      {element: 'input', type: 'decimal', id: 'subtotal', label:'Subtotal'},
+      {element: 'input', type: 'decimal', id: 'tax', label:'Tax'},
+      {element: 'input', type: 'decimal', id: 'total', label:'Total'},
       {element: 'textarea', id: 'observation', label:'Observation'},
     ]
   },
@@ -55,7 +55,7 @@ const Helper = {
       {element: 'select', id: 'promotion_id', label:'Promotion', options:options},
       {element: 'textarea', id: 'observation', label:'Observation'},
       {element: 'input', type: 'number', id: 'quantity', label:'Quantity'},
-      {element: 'input', type: 'number', id: 'price', label:'Price'},
+      {element: 'input', type: 'decimal', id: 'price', label:'Price'},
     ]
   },
   getOrderProductArray(options){
@@ -63,7 +63,7 @@ const Helper = {
       {element: 'select', id: 'product_id', label:'Product', options:options},
       {element: 'textarea', id: 'observation', label:'Observation'},
       {element: 'input', type: 'number', id: 'quantity', label:'Quantity'},
-      {element: 'input', type: 'number', id: 'price', label:'Price'},
+      {element: 'input', type: 'decimal', id: 'price', label:'Price'},
     ]
   },
   serializeObj(obj){
