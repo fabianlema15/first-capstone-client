@@ -10,7 +10,7 @@ body {
   color: #444444;
   text-align: center;
   line-height: 1.5;
-  background-image: url('/bottles.jpg');
+  background-image: url('../../images/bottles.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -149,7 +149,7 @@ section {
 
 section.title-section {
   /*background-color: #48ABEF*/
-  background-image: url('/bottles.jpg');
+  background-image: url('../../images/bottles.jpg');
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 25px black;
 }
