@@ -6,7 +6,7 @@ This app should be used by any liquor store to sell different kinds of liquor, g
 
 Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
 
-## Funtionalities
+## Functionalities
 
 1. There are 3 roles: admin, manager, and seller.
 2. As the admin should able to access all functionalities of the app.
@@ -27,35 +27,35 @@ Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
 
 1. Login
 
-![App Image](/images/1.png)
+![App Image](/src/images/1.png)
 
 2. Main Menu
 
-![App Image](/images/2.png)
+![App Image](/src/images/2.png)
 
 3. List
 
-![App Image](/images/3.png)
+![App Image](/src/images/3.png)
 
 4. Each Item
 
-![App Image](/images/4.png)
+![App Image](/src/images/4.png)
 
 5. Orders
 
-![App Image](/images/5.png)
+![App Image](/src/images/5.png)
 
 6. Order Detail
 
-![App Image](/images/6.png)
+![App Image](/src/images/6.png)
 
 7. Report
 
-![App Image](/images/7.png)
+![App Image](/src/images/7.png)
 
 8. Change password
 
-![App Image](/images/8.png)
+![App Image](/src/images/8.png)
 
 
 ## Access

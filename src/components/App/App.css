@@ -10,13 +10,28 @@ body {
   color: #444444;
   text-align: center;
   line-height: 1.5;
+  background-image: url('/bottles.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   /*background-image: linear-gradient(to right, #e6f5ff 0%, #b3e0ff 31%, #e6f5ff 100%);*/
+}
+
+#background-image {
+  background-color: white;
+  opacity:0.9;
+  top: 0px;
+  left: 0px;
+  position:fixed;
+  height:100%;
+  width:100%;
+  z-index:-1;
 }
 
 nav,
 footer {
   padding: 1% 0;
-  background-color: #338fff;
+  background-color: #48ABEF;
   height: 50px;
 }
 
@@ -26,6 +41,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 10;
+  box-shadow: 5px 5px 3px grey;
 }
 
 fieldset {
@@ -35,7 +51,7 @@ fieldset {
 }
 
 .content-with-nav {
-  margin-top: 55px;
+  margin-top: 65px;
 }
 
 button {
@@ -123,11 +139,23 @@ button:active {
 }
 
 section {
-  margin-top: 10px;
+  margin: 15px;
   padding: 10px;
-  background-color: white;
   border: 1px solid #DBDBEA;
   border-radius: 7px;
+  background-color: #FFFFFFCC;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section.title-section {
+  /*background-color: #48ABEF*/
+  background-image: url('/bottles.jpg');
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 25px black;
+}
+
+.title-section p {
+
 }
 
 section fieldset{
@@ -174,60 +202,48 @@ input, textarea, select {
   font-weight: bold;
 }
 
+ul {
+  text-align: left;
+}
+
+.imageb {
+  position: relative;
+  width: 50px;
+  padding: 3px;
+  top: -200px;
+  box-shadow: none;
+  background-color: none;
+  border: 1px solid gray;
+}
+
+.back-image {
+  left: -80px;
+}
+
+.next-image {
+  right: -80px;
+}
+
+.imageb img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+div.polaroid {
+  margin: 0 auto;
+  padding-top: 9px;
+  width: 220px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.container {
+  padding-bottom: 1px;
+}
+
 @media screen and (min-width: 700px) {
   fieldset {
     width: 450px;
     margin: auto;
   }
 }
-
-/*
-@media screen and (max-width: 570px) {
-  label {
-    width: 100%;
-    display:block;
-  }
-
-  input, textarea{
-    width: 100%;
-    float: none;
-  }
-
-  .form-inputs{
-    width: 100%;
-    display: block;
-  }
-
-  .form-rating{
-    width: 100%;
-    float: none;
-  }
-
-  .form-rating label {
-    display: block;
-    width: 70%;
-  }
-
-  .form-rating input {
-    float: none;
-    width: 20%;
-  }
-
-  .buttons {
-    text-align: center;
-    width: 100%;
-    display: block;
-  }
-
-  .buttons button {
-    width: 70%;
-  }
-
-  .header div, .header label{
-    width: 100%;
-  }
-
-  .header div {
-    margin-top: 10px;
-  }
-}*/

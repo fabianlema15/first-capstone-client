@@ -28,7 +28,7 @@ class RegularLogin extends React.Component{
       <main className='content-with-nav'>
       {this.context.error && <section><div className='errorMsg'>{this.context.error}</div></section>}
       <section>
-        <h4>Insert credentials provided by your manager</h4>
+        <h4>Insert credentials provided by your employer</h4>
         <form onSubmit={this.context.submitLogin}>
           <Input id='user_code' value={this.state.user_code} label='User Code' type='number' onChange={this.handleInputChange}/>
           <Input id='password' value={this.state.password} label='Password' type='password' onChange={this.handleInputChange}/>
