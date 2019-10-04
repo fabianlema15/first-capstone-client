@@ -4,6 +4,13 @@ exports[`<ReportPage /> Renders ReportPage as expected 1`] = `
 <div>
   <nav>
     <div
+      className="name-centered"
+    >
+      <h1>
+        Report
+      </h1>
+    </div>
+    <div
       className="back-nav"
     >
       <a
@@ -12,14 +19,6 @@ exports[`<ReportPage /> Renders ReportPage as expected 1`] = `
       >
         Back
       </a>
-    </div>
-    <div
-      className="name-nav"
-    >
-      <h2>
-        Report
-        s
-      </h2>
     </div>
   </nav>
   <main
@@ -32,56 +31,64 @@ exports[`<ReportPage /> Renders ReportPage as expected 1`] = `
         <h3>
           Reports
         </h3>
-        <fieldset>
+        <div
+          className="fieldset"
+        >
           <label
             htmlFor="from"
           >
             From
-            <input
-              className="Input "
-              id="from"
-              onChange={[Function]}
-              required={true}
-              type="date"
-              value=""
-            />
           </label>
-        </fieldset>
-        <fieldset>
+          <input
+            className="Input "
+            id="from"
+            onChange={[Function]}
+            placeholder="Ex: 01/20/2019"
+            required={true}
+            type="date"
+            value=""
+          />
+        </div>
+        <div
+          className="fieldset"
+        >
           <label
             htmlFor="to"
           >
-            to
-            <input
-              className="Input "
-              id="to"
-              onChange={[Function]}
-              required={true}
-              type="date"
-              value=""
-            />
+            To
           </label>
-        </fieldset>
-        <fieldset>
+          <input
+            className="Input "
+            id="to"
+            onChange={[Function]}
+            placeholder="Ex: 12/31/2019"
+            required={true}
+            type="date"
+            value=""
+          />
+        </div>
+        <div
+          className="fieldset"
+        >
           <label
             htmlFor="user_id"
           >
             User
-            <select
-              className="Textarea "
-              id="user_id"
-              onChange={[Function]}
-              required={true}
+          </label>
+          <select
+            className="Textarea "
+            id="user_id"
+            onChange={[Function]}
+            required={true}
+            value=""
+          >
+            <option
               value=""
             >
-              <option
-                value=""
-              >
-                --SELECT ONE OPTION--
-              </option>
-            </select>
-          </label>
-        </fieldset>
+              --SELECT ONE OPTION--
+            </option>
+          </select>
+        </div>
         <button
           className="green"
           type="submit"

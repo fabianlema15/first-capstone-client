@@ -1,0 +1,20 @@
+labela {
+  display: block;
+}
+
+.fieldset label{
+  text-align: left;
+  width: 38%;
+}
+
+.fieldset input, .fieldset  button, .fieldset  select, .fieldset  textarea{
+  text-align: left;
+  width: 58%;
+}
+
+.fieldset  button {
+  text-align: center;
+  height: 26px;
+  padding: 0;
+  margin: 0;
+}

@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /*background-image: linear-gradient(to right, #e6f5ff 0%, #b3e0ff 31%, #e6f5ff 100%);*/
 }
 
 #background-image {
@@ -28,9 +27,18 @@ body {
   z-index:-1;
 }
 
+.PictureButton {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
 nav,
 footer {
-  padding: 1% 0;
+  /*padding: 1% 0;*/
   background-color: #48ABEF;
   height: 50px;
 }
@@ -40,7 +48,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   box-shadow: 5px 5px 3px grey;
 }
 
@@ -162,10 +170,27 @@ section fieldset{
   border: 1px solid #DBDBEA;
   background-color: white;
   border-radius: 7px;
+  display:table;
+  background-color: green;
+}
+
+section .fieldset{
+  border: 1px solid gray;
+  margin: auto;
+  padding: 0.35em 0.625em 0.75em;
+  width: 100%;
+  border: 1px solid #DBDBEA;
+  background-color: white;
+  border-radius: 7px;
+  display:flex;
 }
 
 input, textarea, select {
   font-size: 16px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .item-description div{
@@ -241,9 +266,24 @@ div.container {
   padding-bottom: 1px;
 }
 
-@media screen and (min-width: 700px) {
-  fieldset {
-    width: 450px;
+@media screen and (min-width: 500px) {
+  section .fieldset {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .elements-form {
+    width: 90%;
+    display: table;
+    clear: both;
+    margin: 0 auto;
+  }
+
+  .elements-form .fieldset {
+    float: left;
+    width: 50%;
     margin: auto;
   }
 }

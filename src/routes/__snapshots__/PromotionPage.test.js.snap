@@ -4,6 +4,13 @@ exports[`<PromotionPage /> Renders PromotionPage as expected 1`] = `
 <div>
   <nav>
     <div
+      className="name-centered"
+    >
+      <h1>
+        Promotion
+      </h1>
+    </div>
+    <div
       className="back-nav"
     >
       <a
@@ -12,14 +19,6 @@ exports[`<PromotionPage /> Renders PromotionPage as expected 1`] = `
       >
         Back
       </a>
-    </div>
-    <div
-      className="name-nav"
-    >
-      <h2>
-        Promotion
-        s
-      </h2>
     </div>
   </nav>
   <main

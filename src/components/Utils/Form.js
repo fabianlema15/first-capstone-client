@@ -23,6 +23,7 @@ export default class Form extends Component {
     if (this.context.error) this.context.clearError()
     const input = e.target.id;
     const value = e.target.value;
+    console.log(e.target.files);
     if (this.context.objName === 'Order Detail'){
       if (input==='product_id'){
         this.setState({
@@ -47,6 +48,10 @@ export default class Form extends Component {
           [input]: value
         })
       }
+    }else if (e.target.files){
+      this.setState({
+        image_title: e.target.files[0]?e.target.files[0].name:null
+      })
     }else{
       this.setState({
         [input]: value
@@ -55,14 +60,16 @@ export default class Form extends Component {
   }
 
   render() {
-    const {type, elements, actionSubmit, actionCancel, obj, readonly=false} = this.props;
+    const {type, elements, actionSubmit, actionCancel, obj, readonly=false, isNew=false} = this.props;
     const inputsJSX = elements? this.generateElements(elements, readonly) : ''
 
     return (
       <form onSubmit={actionSubmit}>
           <h3>{type}</h3>
           {obj && <input type='text' id='id' value={obj.id} readOnly hidden/>}
+          <div className={isNew?'elements-form':''} >
           {inputsJSX}
+          </div>
           {!readonly && <div>
             <button className='blue' type='submit'>Submit</button>
             <button className='orange' onClick={obj?()=>actionCancel(obj.id):actionCancel} type='button'>Cancel</button>
@@ -87,7 +94,7 @@ export default class Form extends Component {
           returValue = <Select key={idx} id={element.id} value={valueElm} label={element.label} onChange={this.handleInputChange} options={element.options} readOnly={readOnly}/>
           break;
         case 'file':
-          returValue = <File key={idx} id={element.id} label={element.label} onChange={this.handleInputChange} readOnly={readOnly}/>
+          returValue = <File key={idx} id={element.id} label={element.label} onChange={this.handleInputChange} readOnly={readOnly} buttonTitle={this.state.image_title}/>
           break;
         default:
           returValue = <div></div>;

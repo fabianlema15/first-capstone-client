@@ -10,7 +10,7 @@ class GenericNew extends React.Component{
   }
 
   render(){
-    return <Form type={`New ${this.context.objName}`} elements={this.context.getObjArray} actionSubmit={this.context.submitNew} actionCancel={this.cancelSubmit} />
+    return <Form type={`New ${this.context.objName}`} elements={this.context.getObjArray} actionSubmit={this.context.submitNew} actionCancel={this.cancelSubmit} isNew={true} />
   }
 }
 

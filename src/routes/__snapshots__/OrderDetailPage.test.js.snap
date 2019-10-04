@@ -4,6 +4,13 @@ exports[`<OrderDetailPage /> Renders OrderDetailPage as expected 1`] = `
 <div>
   <nav>
     <div
+      className="name-centered"
+    >
+      <h1>
+        Order Detail
+      </h1>
+    </div>
+    <div
       className="back-nav"
     >
       <a
@@ -13,52 +20,48 @@ exports[`<OrderDetailPage /> Renders OrderDetailPage as expected 1`] = `
         Back
       </a>
     </div>
-    <div
-      className="name-nav"
-    >
-      <h2>
-        Order Detail
-        s
-      </h2>
-    </div>
   </nav>
   <main
     className="content-with-nav"
   >
     <section>
-      <fieldset>
+      <div
+        className="fieldset"
+      >
         <label
           htmlFor="client_id"
         >
           Client
-          <select
-            className="Textarea "
-            id="client_id"
-            onChange={[Function]}
-            required={true}
+        </label>
+        <select
+          className="Textarea "
+          id="client_id"
+          onChange={[Function]}
+          required={true}
+          value=""
+        >
+          <option
             value=""
           >
-            <option
-              value=""
-            >
-              --SELECT ONE OPTION--
-            </option>
-          </select>
-        </label>
-      </fieldset>
-      <fieldset>
+            --SELECT ONE OPTION--
+          </option>
+        </select>
+      </div>
+      <div
+        className="fieldset"
+      >
         <label
           htmlFor="observation"
         >
           Observation
-          <textarea
-            className="Textarea "
-            id="observation"
-            onChange={[Function]}
-            value=""
-          />
         </label>
-      </fieldset>
+        <textarea
+          className="Textarea "
+          id="observation"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
       <button
         className="blue"
         onClick={[Function]}

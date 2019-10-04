@@ -4,6 +4,13 @@ exports[`<ChangePassPage /> Renders ChangePassPage as expected 1`] = `
 <div>
   <nav>
     <div
+      className="name-centered"
+    >
+      <h1>
+        Change Password
+      </h1>
+    </div>
+    <div
       className="back-nav"
     >
       <a
@@ -13,14 +20,6 @@ exports[`<ChangePassPage /> Renders ChangePassPage as expected 1`] = `
         Back
       </a>
     </div>
-    <div
-      className="name-nav"
-    >
-      <h2>
-        Change Pas
-        s
-      </h2>
-    </div>
   </nav>
   <main
     className="content-with-nav"
@@ -29,39 +28,40 @@ exports[`<ChangePassPage /> Renders ChangePassPage as expected 1`] = `
       <form
         onSubmit={[Function]}
       >
-        <h3>
-          Change Password
-        </h3>
-        <fieldset>
+        <div
+          className="fieldset"
+        >
           <label
             htmlFor="password"
           >
             Password
-            <input
-              className="Input "
-              id="password"
-              onChange={[Function]}
-              required={true}
-              type="password"
-              value=""
-            />
           </label>
-        </fieldset>
-        <fieldset>
+          <input
+            className="Input "
+            id="password"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="fieldset"
+        >
           <label
             htmlFor="password_rep"
           >
             Repeat Password
-            <input
-              className="Input "
-              id="password_rep"
-              onChange={[Function]}
-              required={true}
-              type="password"
-              value=""
-            />
           </label>
-        </fieldset>
+          <input
+            className="Input "
+            id="password_rep"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            value=""
+          />
+        </div>
         <button
           className="green"
           type="submit"

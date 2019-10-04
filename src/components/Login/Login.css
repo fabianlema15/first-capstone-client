@@ -19,18 +19,13 @@
   right: 0;
 }
 
-@media screen and (min-width: 570px) {
-  .numbers-panel button{
-    width: 20%;
-    padding-top: 15%;
-  }
-
+.login-panel{
+  width: 80%;
+  margin: auto;
 }
 
-@media screen and (min-width: 1000px) {
-  .numbers-panel button{
-    width: 15%;
-    padding-top: 10%;
+@media screen and (min-width: 700px) {
+  .login-panel{
+    width: 500px;
   }
-
 }

@@ -1,44 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuPage /> Renders MenuPage as expected 1`] = `
-<main>
-  <section>
+<div>
+  <nav>
     <div
-      className="main-item"
+      className="name-centered"
     >
-      <div
-        className="menu-item"
-      >
-        Change Password
-        <button
-          className="border-gray"
-          onClick={[Function]}
-        >
-          <img
-            alt="Icon"
-            src="menu_icon.png"
-          />
-        </button>
-      </div>
+      <h1>
+        Main Menu
+      </h1>
     </div>
-    <div
-      className="main-item"
-    >
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section>
       <div
-        className="menu-item"
+        className="main-item"
       >
-        Logout
-        <button
-          className="border-gray"
-          onClick={[Function]}
+        <div
+          className="menu-item"
         >
-          <img
-            alt="Icon"
-            src="menu_icon.png"
-          />
-        </button>
+          Change Password
+          <button
+            className="border-gray"
+            onClick={[Function]}
+          >
+            <img
+              alt="Icon"
+              src="menu_icon.png"
+            />
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+      <div
+        className="main-item"
+      >
+        <div
+          className="menu-item"
+        >
+          Logout
+          <button
+            className="border-gray"
+            onClick={[Function]}
+          >
+            <img
+              alt="Icon"
+              src="menu_icon.png"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
 `;

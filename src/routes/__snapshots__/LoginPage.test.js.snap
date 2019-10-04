@@ -1,111 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LoginPage /> Renders LoginPage as expected 1`] = `
-<main
-  role="main"
->
-  <section>
-    <fieldset
-      className="login-input"
+<div>
+  <nav>
+    <div
+      className="name-centered"
     >
-      <fieldset>
-        <label
-          htmlFor="user_code"
+      <h1>
+        Log In
+      </h1>
+    </div>
+  </nav>
+  <main
+    className="content-with-nav"
+  >
+    <section
+      className="login-panel"
+    >
+      <h4>
+        Insert credentials provided by your employer
+      </h4>
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="fieldset"
         >
-          User Code
+          <label
+            htmlFor="user_code"
+          >
+            User Code
+          </label>
           <input
             className="Input "
             id="user_code"
-            readOnly={true}
+            onChange={[Function]}
             required={true}
             type="number"
             value=""
           />
-        </label>
-      </fieldset>
-    </fieldset>
-  </section>
-  <section>
-    <div
-      className="numbers-panel panel"
-    >
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        1
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        2
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        3
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        4
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        5
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        6
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        7
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        8
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        9
-      </button>
-      <button
-        className="gray"
-        onClick={[Function]}
-      >
-        0
-      </button>
-    </div>
-    <div
-      className="buttons"
-    >
-      <button
-        className="orange"
-        onClick={[Function]}
-      >
-        Clear
-      </button>
-      <button
-        className="green"
-        onClick={[Function]}
-      >
-        Next
-      </button>
-    </div>
-  </section>
-</main>
+        </div>
+        <div
+          className="fieldset"
+        >
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="Input "
+            id="password"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            value=""
+          />
+        </div>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Cancel
+        </a>
+        <button
+          className="green"
+          type="submit"
+        >
+          Log In
+        </button>
+      </form>
+      <section>
+        <div
+          className="title-box"
+        >
+          Demo access
+        </div>
+        <div>
+          User Code: 202033
+        </div>
+        <div>
+          Password: 202033
+        </div>
+      </section>
+    </section>
+  </main>
+</div>
 `;

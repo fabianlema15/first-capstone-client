@@ -10,7 +10,7 @@ class GenericSubNew extends React.Component{
   }
 
   render(){
-    return <Form type={`Add Product`} elements={this.context.getSubObjArray} actionSubmit={this.context.submitSubNew} actionCancel={this.cancelSubmit} />
+    return <Form type={`Add Product`} elements={this.context.getSubObjArray} actionSubmit={this.context.submitSubNew} actionCancel={this.cancelSubmit} isNew={true}/>
   }
 }
 

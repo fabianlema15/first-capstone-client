@@ -6,15 +6,12 @@
   position: fixed;
 }
 
-.name-nav {
+.name-centered {
   top: -15px;
-  right: 0;
-  position: fixed;
-  width: 70%;
+  position: relative;
   text-align: center;
   color: black;
 }
-
 
 a{
   color: black;
@@ -27,4 +24,5 @@ a{
   padding: 30px;
   position: absolute;
   right: 5px;
+  top: 60px;
 }

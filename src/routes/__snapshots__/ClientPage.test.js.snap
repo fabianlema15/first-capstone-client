@@ -4,6 +4,13 @@ exports[`<ClientPage /> Renders ClientPage as expected 1`] = `
 <div>
   <nav>
     <div
+      className="name-centered"
+    >
+      <h1>
+        Client
+      </h1>
+    </div>
+    <div
       className="back-nav"
     >
       <a
@@ -12,14 +19,6 @@ exports[`<ClientPage /> Renders ClientPage as expected 1`] = `
       >
         Back
       </a>
-    </div>
-    <div
-      className="name-nav"
-    >
-      <h2>
-        Client
-        s
-      </h2>
     </div>
   </nav>
   <main

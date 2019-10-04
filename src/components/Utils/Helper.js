@@ -5,7 +5,7 @@ const Helper = {
       {element: 'file', type: 'file', id: 'picture', label:'Picture'},
       {element: 'input', type: 'number', id: 'stock', label:'Stock'},
       {element: 'input', type: 'decimal', id: 'price', label:'Price'},
-      {element: 'textarea', id: 'description', label:'Decription'},
+      {element: 'textarea', id: 'description', label:'Description'},
     ]
   },
   getClientsArray(){

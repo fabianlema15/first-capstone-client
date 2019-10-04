@@ -11,7 +11,7 @@ class PromotionNew extends React.Component{
 
   render(){
     return <div>
-      <Form type={`New ${this.context.objName}`} elements={this.context.getObjArray} actionSubmit={this.context.submitNew} actionCancel={this.cancelSubmit} obj={this.context.newProduct} readonly={true} />
+      <Form type={`New ${this.context.objName}`} elements={this.context.getObjArray} actionSubmit={this.context.submitNew} actionCancel={this.cancelSubmit} obj={this.context.newProduct} readonly={true} isNew={true}/>
 
     </div>
   }

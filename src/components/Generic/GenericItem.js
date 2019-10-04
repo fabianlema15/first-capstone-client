@@ -31,7 +31,7 @@ class GenericItem extends React.Component{
       {this.props.obj.selected ? <Form type={`Edit ${this.context.objName}`} elements={this.context.getObjArray} obj={this.props.obj} actionSubmit={this.context.submitEdit} actionCancel={this.cancelSubmit} /> :
         <div>
         {(this.context.objName==='Product' || this.context.objName==='Promotion') ? <div className='div-w-picture'>
-          <div className='div-picture'><img src={`${config.API_PUBLIC}/${this.props.obj.picture}`} alt='Hello'/></div>
+          <div className='div-picture'><img src={`${config.API_PUBLIC}/${this.props.obj.picture}`} alt={this.props.obj.name + ' picture'}/></div>
           <div className='div-content'>{this.getItemContent('item-description-p')}
           <button className='red' onClick={e => this.context.delete(this.props.obj.id)}>Delete</button>
           <button className='green' onClick={e => this.context.setSelected(this.props.obj.id)}>Edit</button>

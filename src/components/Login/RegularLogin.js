@@ -3,6 +3,7 @@ import { Input } from '../Utils/FormElements';
 import GenericContext from '../../contexts/GenericContext';
 import Header from '../Header/Header'
 import { Link } from 'react-router-dom';
+import './Login.css'
 
 class RegularLogin extends React.Component{
   static contextType = GenericContext;
@@ -26,8 +27,8 @@ class RegularLogin extends React.Component{
     return <div>
         <Header notBack={true}/>
       <main className='content-with-nav'>
+      <section className='login-panel'>
       {this.context.error && <section><div className='errorMsg'>{this.context.error}</div></section>}
-      <section>
         <h4>Insert credentials provided by your employer</h4>
         <form onSubmit={this.context.submitLogin}>
           <Input id='user_code' value={this.state.user_code} label='User Code' type='number' onChange={this.handleInputChange}/>
