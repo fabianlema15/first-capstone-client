@@ -6,10 +6,6 @@ import GenericContext from '../../contexts/GenericContext'
 class Login extends React.Component{
   static contextType = GenericContext;
 
-  componentDidMount() {
-    //this.context.clearError()
-  }
-
   state = {
     user_code: '',
     password: ''

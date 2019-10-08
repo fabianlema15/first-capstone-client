@@ -31,7 +31,6 @@ class OrderDetail extends React.Component{
   }
 
   submitNewOrder = (e) => {
-    //const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
     const newOrderDetail = {
       client_id: this.state.client_id,
       subtotal: this.state.subtotal,
@@ -43,9 +42,6 @@ class OrderDetail extends React.Component{
   }
 
   render(){
-    //console.log(this.context.getClientsObj && this.context.getClientsObj[0].id);
-    //const idClient = this.state.client_id?this.state.client_id:(this.context.getClientsObj?this.context.getClientsObj[0].id:0)
-    //console.log(typeof idClient);
     return <div>
       <Header back='/orders' />
     <main className='content-with-nav'>

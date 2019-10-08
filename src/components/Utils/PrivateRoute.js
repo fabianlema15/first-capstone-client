@@ -12,8 +12,6 @@ export default function PrivateRoute({ component, ...props }) {
         let hasAccess = false;
         const decoded = TokenService.decodeUser();
         if (decoded) hasAccess = Helper.roleHasAccess(decoded.role, componentProps.match.path)
-        //console.log(componentProps.match.path);
-        //console.log();
         return TokenService.hasAuthToken() && hasAccess
           ? <Component {...componentProps} />
           : ( TokenService.hasAuthToken() && !hasAccess ? <Redirect

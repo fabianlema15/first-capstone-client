@@ -36,35 +36,33 @@ export default class NotFoundPage extends Component {
     return (<main>
       <section className='title-section'>
         <h1>Liquor Store App</h1>
-        <p>This is a private app to manage a liquor store business. The employer should provide you a code user and password to access to the app.</p>
         <button className='blue' type='button' onClick={this.toLogin}>Log In</button>
         <section>
           <div className="title-box" >Demo access</div>
           <div>User Code: 202033</div>
           <div>Password: 202033</div>
         </section>
+        <section>
+          <p>This app could be used by any liquor store because this provides you with facilities to create, edit and delete products, clients, promotions (combos), and users to use the app. Also, you could control your sells getting a report by a period of time.</p>
+          <div className='title-subsection'>Users can access this app depending on what role is:
+            <ul>
+              <li>Admin: Can have access to all functionalities.</li>
+              <li>Manager: Have access to manage products, promotions, and sells.</li>
+              <li>Seller: Just have access to create manage orders.</li>
+            </ul>
+          </div>
+          <div className='title-subsection'>Follow the next steps to give access to your collaborators:
+            <ol>
+              <li>Access as admin and create a new user.</li>
+              <li>The system should generate a code easy to remember.</li>
+              <li>For first access, the password is the same as the user code.</li>
+              <li>Enjoy the functionalities.</li>
+            </ol>
+          </div>
+        </section>
       </section>
-      <section>
-        <h3>Functionalities</h3>
-        <ul>
-          <li>There are 3 roles: admin, manager, and seller.</li>
-          <li>As the admin should able to access all functionalities of the app.</li>
-          <li>The manager can see and manage (CRUD) a list of all products, clients, sales, and sellers.</li>
-          <li>Admin can create new accounts with any role.</li>
-          <li>Managers can create promotions (combos) that can have many products and the quantity of each one.</li>
-          <li>As the manager could daily report of all employees, manage products and its stocks, also manages one new sale. Get reports of sales and products.</li>
-          <li>Manage can get reports of sales by any seller.</li>
-          <li>Users should access the app using code with 6 numbers.</li>
-          <li>The client should have basic information to be contacted if is necessary.</li>
-          <li>Each sale can add new products and manage quantity. The total by each product and all products should be calculated automatically.</li>
-          <li>The product of each product inside of promotions should be updated automatically after the new sale.</li>
-          <li>Each product should behave at least information on stock, price, and picture.</li>
-          <li>Reports should be sended by email.</li>
-          <li>The app should be focused on use in phone or tablet device.</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Images</h3>
+      <div>
+        <h3>Screenshots</h3>
         <div className="polaroid">
           <img src={require(`../images/${this.state.count}.png`)} alt="Description"/>
           <div className="container">
@@ -75,7 +73,7 @@ export default class NotFoundPage extends Component {
           <button className='imageb back-image' onClick={this.backButton}><img src={backArrow} alt='Back'/></button>
           <button className='imageb next-image' onClick={this.nextButton}><img src={nextArrow} alt='Back'/></button>
         </div>
-      </section>
+      </div>
 
       </main>
     )

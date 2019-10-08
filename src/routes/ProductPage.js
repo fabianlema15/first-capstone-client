@@ -78,7 +78,6 @@ class ProductPage extends React.Component{
   submitNew = (e) => {
     e.preventDefault();
     const { name, picture, stock, price, description } = e.target;
-    //console.log(picture.files[0]);
     const fileName = `${Date.parse(new Date())}.${picture.files[0].name.split('.').pop()}`;
     const newProduct = {
       name: name.value,

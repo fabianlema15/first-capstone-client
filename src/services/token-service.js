@@ -19,7 +19,6 @@ const TokenService = {
     return !!TokenService.getAuthToken()
   },
   encodeUser(user, role) {
-    //console.log(user+ '::' + role);
     window.sessionStorage.setItem(config.AUX_KEY, window.btoa(`${user}:${role}`))
   },
   decodeUser() {

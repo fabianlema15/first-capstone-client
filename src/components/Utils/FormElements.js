@@ -60,18 +60,6 @@ class File extends Component{
   }
 }
 
-/*function File({ className, label, idx, id, buttonTitle, pictureAction, ...props }) {
-  return (
-    <fieldset>
-    <label key={idx} htmlFor={id}>
-      {label}
-      <input id={id} type="file" ref={ref} required accept=".png,.jpg,.jpeg" className={['PictureButton', className].join(' ')} {...props} />
-      <button type='button' className='green' onClick={pictureAction}>{buttonTitle || 'Select Image'}</button>
-    </label>
-    </fieldset>
-  )
-}*/
-
 const ColoredLine = ({ color }) => (
     <hr
         style={{

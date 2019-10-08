@@ -2,6 +2,12 @@
 
 This app should be used by any liquor store to sell different kinds of liquor, get reports about every sell and day. Also, we can get the maintenance of products, clients, and users.
 
+- [Demo](#demo)
+- [Functionalities](#functionalities)
+- [Screenshots](#screenshots)
+- [Access](#access)
+- [Note](#note)
+
 ## Demo
 
 Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
@@ -23,7 +29,7 @@ Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
 13. Reports should be sended by email.
 8. The app should be focused on use in phone or tablet device.
 
-## Images
+## Screenshots
 
 1. Login
 
@@ -61,9 +67,7 @@ Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
 ## Access
 
 You can access and test all functionalities using credentials:
-
-User Code: 202033
-
+>User Code: 202033  
 Password: 202033
 
 ## Note
