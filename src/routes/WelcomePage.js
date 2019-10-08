@@ -36,12 +36,6 @@ export default class NotFoundPage extends Component {
     return (<main>
       <section className='title-section'>
         <h1>Liquor Store App</h1>
-        <button className='blue' type='button' onClick={this.toLogin}>Log In</button>
-        <section>
-          <div className="title-box" >Demo access</div>
-          <div>User Code: 202033</div>
-          <div>Password: 202033</div>
-        </section>
         <section>
           <p>This app could be used by any liquor store because this provides you with facilities to create, edit and delete products, clients, promotions (combos), and users to use the app. Also, you could control your sells getting a report by a period of time.</p>
           <div className='title-subsection'>Users can access this app depending on what role is:
@@ -59,6 +53,12 @@ export default class NotFoundPage extends Component {
               <li>Enjoy the functionalities.</li>
             </ol>
           </div>
+        </section>
+        <section>
+        <button className='blue' type='button' onClick={this.toLogin}>Log In</button>
+          <div className="title-box" >Demo access</div>
+          <div>User Code: 202033</div>
+          <div>Password: 202033</div>
         </section>
       </section>
       <div>
