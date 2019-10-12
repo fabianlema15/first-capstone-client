@@ -34,6 +34,7 @@ class Promotion extends React.Component{
           {!this.context.showForm && <button className='blue' onClick={e => this.context.showHideForm(!this.context.showForm)}>Add</button>}
         </section>
         <section>
+          <section>Heroku server has restrictions about stored images and to send email, for this reason, images from product and promotion that are uploaded are not showing. Also the email is not sending.</section>
           <GenericList/>
         </section>
       </main>

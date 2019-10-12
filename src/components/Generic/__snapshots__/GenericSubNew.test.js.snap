@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenericSubNew /> Renders GenericSubNew as expected 1`] = `
+<form>
+  <h3>
+    Add Product
+  </h3>
+  <div
+    className="elements-form"
+  >
+    
+  </div>
+  <div>
+    <button
+      className="blue"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      className="orange"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<GenericSubNew /> With Context 1`] = `
+<Form
+  actionCancel={[Function]}
+  inputs={Array []}
+  isNew={true}
+  type="Add Product"
+/>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportItem /> Renders ReportItem as expected 1`] = `
+<div
+  className="item-list"
+>
+  <div />
+  <hr
+    style={
+      Object {
+        "backgroundColor": "gray",
+        "color": "gray",
+        "height": 3,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<ReportItem /> With Context 1`] = `
+<div
+  className="item-list"
+>
+  <div />
+  <ColoredLine
+    color="gray"
+  />
+</div>
+`;

@@ -15,7 +15,7 @@ class ReportList extends React.Component{
 
   render(){
     return <div>
-      {Object.keys(this.context.orderList).length>0 ? this.getItems() : `You have no orders in this report`}
+      {this.context.orderList && Object.keys(this.context.orderList).length>0 ? this.getItems() : `You have no orders in this report`}
     </div>
   }
 }

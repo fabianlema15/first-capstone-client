@@ -134,7 +134,6 @@ class PromotionPage extends React.Component{
     GenericApiService.saveNew(this.props.ROUTE, newPromotion)
       .then(this.setNewProduct)
       .then(() => UploadApiService.uploadImage(picture.files[0], fileName))
-      .then(res => console.log(res))
       .catch(this.setError)
   }
 

@@ -57,13 +57,10 @@ const AuthApiService = {
         return res
       })
       .catch(err => {
-        console.log('refresh token request error')
-        console.error(err)
       })
   },
 
   changePassword(credentials) {
-    console.log(credentials);
     return fetch(`${config.API_ENDPOINT}/auth/changepassword`, {
       method: 'PATCH',
       headers: {

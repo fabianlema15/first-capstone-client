@@ -24,7 +24,6 @@ class OrderDetail extends React.Component{
   handleInputChange = e => {
     const input = e.target.id;
     const value = e.target.value;
-    //console.log(input, value)
     this.setState({
       [input]: value
     })

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PromotionNew /> Renders PromotionNew as expected 1`] = `
+<div>
+  <form>
+    <h3>
+      New undefined
+    </h3>
+    <div
+      className="elements-form"
+    >
+      
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<PromotionNew /> With Context 1`] = `
+<div>
+  <Form
+    actionCancel={[Function]}
+    inputs={Array []}
+    isNew={true}
+    readonly={true}
+    type="New undefined"
+  />
+</div>
+`;

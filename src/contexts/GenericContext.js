@@ -9,5 +9,6 @@ const GenericContext = React.createContext({
   setProductList: () => {},
   showForm: () => {},
   hideForm: () => {},
+  getAll: () => {},
 })
 export default GenericContext

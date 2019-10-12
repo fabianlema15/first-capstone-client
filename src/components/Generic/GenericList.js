@@ -15,7 +15,7 @@ class GenericList extends React.Component{
 
   render(){
     return <div>
-            {Object.keys(this.context.objList).length>0 ? this.renderObjs() : `You still have no ${this.context.objName}s added`}
+          {this.context.objList && Object.keys(this.context.objList).length>0 ? this.renderObjs() : `You still have no ${this.context.objName}s added`}
       </div>
   }
 }

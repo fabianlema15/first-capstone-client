@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenericItem /> Renders GenericItem as expected 1`] = `
+<div
+  className="item-list"
+>
+  <div>
+    <div>
+      <button
+        className="red"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+      <button
+        className="green"
+        onClick={[Function]}
+      >
+        Edit
+      </button>
+    </div>
+  </div>
+  <hr
+    style={
+      Object {
+        "backgroundColor": "gray",
+        "color": "gray",
+        "height": 3,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<GenericItem /> With Context 1`] = `
+<div
+  className="item-list"
+>
+  <div>
+    <div>
+      <button
+        className="red"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+      <button
+        className="green"
+        onClick={[Function]}
+      >
+        Edit
+      </button>
+    </div>
+  </div>
+  <ColoredLine
+    color="gray"
+  />
+</div>
+`;

@@ -22,7 +22,6 @@ class OrderDetailPage extends React.Component{
 
   componentDidMount() {
     const { orderId } = this.props.match ? this.props.match.params : 'new'
-    //console.log(orderId);
     if (orderId && orderId!=='new'){
       this.setState({loading: true})
       Promise.all([
@@ -30,7 +29,6 @@ class OrderDetailPage extends React.Component{
         GenericApiService.getAll(`orders/${orderId}/products`),
         GenericApiService.getAll(`orders/${orderId}/promotions`)
       ]).then(values =>{
-        //console.log(values)
         this.setState({
           currentOrder: values[0],
           objList: Helper.serializeObj(values[1]),
@@ -79,7 +77,6 @@ class OrderDetailPage extends React.Component{
   }
 
   setCurrentOrder = currentOrder => {
-    //console.log(currentOrder);
     this.setState({ currentOrder })
   }
 
@@ -179,7 +176,6 @@ class OrderDetailPage extends React.Component{
 
   submitNewOrder = (newOrderDetail) => {
     newOrderDetail.user_id = TokenService.decodeUser().user_id;
-    //console.log(newOrderDetail);
     GenericApiService.saveNew(this.props.ROUTE, newOrderDetail)
       .then(this.setCurrentOrder)
       .catch(this.setError)

@@ -56,6 +56,7 @@ export default class NotFoundPage extends Component {
         </section>
         <section>
         <button className='blue' type='button' onClick={this.toLogin}>Log In</button>
+          <div>.</div>
           <div className="title-box" >Demo access</div>
           <div>User Code: 202033</div>
           <div>Password: 202033</div>

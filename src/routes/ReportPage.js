@@ -39,7 +39,6 @@ class ReportPage extends React.Component{
   }
 
   setError = error => {
-    console.log(console.error());
     this.setState({ error: error.error || 'We got some error', loading: false })
   }
 

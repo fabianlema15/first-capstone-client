@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GenericNew from './GenericNew'
 import renderer from 'react-test-renderer';
-//import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Helper from '../Utils/Helper'
 import Adapter from 'enzyme-adapter-react-16';

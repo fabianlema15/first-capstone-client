@@ -11,6 +11,7 @@ This app should be used by any liquor store to sell different kinds of liquor, g
 ## Demo
 
 Click on the next link: [Demo](https://fabian-liquor-app.now.sh)
+>Heroku server has restrictions about stored images and to send email, for this reason, images from product and promotion that are uploaded are not showing. Also the email is not sending.
 
 ## Functionalities
 
@@ -72,4 +73,4 @@ Password: 202033
 
 ## Note
 
-Heroku server has restrictions about stored images and to send email, for this reason, images from product that are uploaded are not showing. Also the email is not sending.
+Heroku server has restrictions about stored images and to send email, for this reason, images from product and promotion that are uploaded are not showing. Also the email is not sending.

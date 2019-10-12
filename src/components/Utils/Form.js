@@ -23,7 +23,6 @@ export default class Form extends Component {
     if (this.context.error) this.context.clearError()
     const input = e.target.id;
     const value = e.target.value;
-    console.log(e.target.files);
     if (this.context.objName === 'Order Detail'){
       if (input==='product_id'){
         this.setState({

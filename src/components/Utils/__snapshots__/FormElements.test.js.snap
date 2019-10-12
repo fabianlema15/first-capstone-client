@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormElements /> Renders ColoredLine as expected 1`] = `
+<hr
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "color": undefined,
+      "height": 3,
+    }
+  }
+/>
+`;
+
+exports[`<FormElements /> Renders File as expected 1`] = `
+<div
+  className="fieldset"
+>
+  <label>
+    <input
+      accept=".png,.jpg,.jpeg"
+      className="PictureButton "
+      required={true}
+      type="file"
+    />
+  </label>
+  <button
+    className="green"
+    onClick={[Function]}
+    type="button"
+  >
+    Select Image
+  </button>
+</div>
+`;
+
+exports[`<FormElements /> Renders Input as expected 1`] = `
+<div
+  className="fieldset"
+>
+  <label />
+  <input
+    className="Input "
+    required={true}
+  />
+</div>
+`;
+
+exports[`<FormElements /> Renders Select as expected 1`] = `
+<div
+  className="fieldset"
+>
+  <label />
+  <select
+    className="Textarea "
+    required={true}
+  >
+    <option
+      value=""
+    >
+      --SELECT ONE OPTION--
+    </option>
+  </select>
+</div>
+`;
+
+exports[`<FormElements /> Renders Textarea as expected 1`] = `
+<div
+  className="fieldset"
+>
+  <label />
+  <textarea
+    className="Textarea "
+  />
+</div>
+`;
