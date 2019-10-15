@@ -22,7 +22,6 @@ class Product extends React.Component{
         </section>
         {this.context.error && <section><div className='errorMsg'>{this.context.error}</div></section>}
         <section>
-          <section>Heroku server has restrictions about stored images and to send email, for this reason, images from product and promotion that are uploaded are not showing. Also the email is not sending.</section>
           <GenericList/>
         </section>
       </main>

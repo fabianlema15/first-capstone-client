@@ -14,14 +14,15 @@ class ProductPage extends React.Component{
     objList: {},
     error: null,
     showForm: false,
+    counterImg: 0
   };
 
   setProductList = objList => {
-    this.setState({ objList })
+    this.setState({ objList, loading: false })
   }
 
   setError = error => {
-    this.setState({ error: error.error })
+    this.setState({ error: error.error, loading: false })
   }
 
   clearError = () => {
@@ -48,7 +49,8 @@ class ProductPage extends React.Component{
       objList: {
         ...this.state.objList,
         [product.id]:product},
-      showForm: false
+      showForm: false,
+      loading: false
     })
   }
 
@@ -58,7 +60,8 @@ class ProductPage extends React.Component{
     this.setState({
       objList:{
         ...this.state.objList,
-        [idProduct]:this.state.objList[idProduct]}
+        [idProduct]:this.state.objList[idProduct]},
+      loading: false
     })
   }
 
@@ -87,26 +90,36 @@ class ProductPage extends React.Component{
       description: description.value
     }
 
+    let productAdded = {}
+    this.setState({loading: true})
     GenericApiService.saveNew(this.props.ROUTE, newProduct)
-      .then(this.addProduct)
+      .then(product => {
+        productAdded = product
+      })
       .then(() => UploadApiService.uploadImage(picture.files[0], fileName))
+      .then(res => {
+          this.addProduct(productAdded)
+      })
       .catch(this.setError)
 
   }
 
   submitEdit = (e) => {
     e.preventDefault();
+    this.setState({loading: true})
     const { id, name, picture, stock, price, description } = e.target;
+    const fileName = `${Date.parse(new Date())}.${picture.files[0].name.split('.').pop()}`;
     const newProduct = {
       name: name.value,
-      picture: picture.value,
+      picture: fileName,
       stock: stock.value,
       price: price.value,
       description: description.value
     }
 
     GenericApiService.saveExisting(this.props.ROUTE, id.value, newProduct)
-      .then(() => this.editProduct(id.value, newProduct))
+      .then(() => UploadApiService.uploadImage(picture.files[0], fileName))
+      .then(res => this.editProduct(id.value, newProduct))
       .catch(this.setError)
   }
 
@@ -130,7 +143,8 @@ class ProductPage extends React.Component{
       submitEdit: this.submitEdit,
       delete: this.delete,
       getObjArray: Helper.getProductArray(),
-      objName: 'Product'
+      objName: 'Product',
+      loading: this.state.loading,
     }
 
     return (

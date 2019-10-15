@@ -18,7 +18,7 @@ const UploadApiService = {
       .then(res =>
         (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : Promise.resolve('OK')
+          : res.json()
       )
   }
 

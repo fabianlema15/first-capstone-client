@@ -33,7 +33,7 @@ class PromotionPage extends React.Component{
   }
 
   setPromotionList = objList => {
-    this.setState({ objList })
+    this.setState({ objList, loading: false })
   }
 
   setPromotionSubList = objSubList => {
@@ -41,7 +41,7 @@ class PromotionPage extends React.Component{
   }
 
   setError = error => {
-    this.setState({ error: error.error })
+    this.setState({ error: error.error, loading: false })
   }
 
   clearError = () => {
@@ -76,7 +76,8 @@ class PromotionPage extends React.Component{
       objList: {
         ...this.state.objList,
         [promotion.id]:promotion},
-      showForm: false
+      showForm: false,
+      loading: false
     })
   }
 
@@ -95,7 +96,8 @@ class PromotionPage extends React.Component{
     this.setState({
       objList:{
         ...this.state.objList,
-        [idPromotion]:this.state.objList[idPromotion]}
+        [idPromotion]:this.state.objList[idPromotion]},
+      loading: false
     })
   }
 
@@ -114,6 +116,7 @@ class PromotionPage extends React.Component{
   }
 
   getAll = () => {
+    this.setState({loading: true})
     GenericApiService.getAll(this.props.ROUTE)
       .then(result => this.setPromotionList(Helper.serializeObj(result)))
       .catch(this.setError)
@@ -131,9 +134,16 @@ class PromotionPage extends React.Component{
       description: description.value
     }
 
+    let promotionAdded = {}
+    this.setState({loading: true})
     GenericApiService.saveNew(this.props.ROUTE, newPromotion)
-      .then(this.setNewProduct)
+      .then(promotion => {
+        promotionAdded = promotion
+      })
       .then(() => UploadApiService.uploadImage(picture.files[0], fileName))
+      .then(res => {
+          this.setNewProduct(promotionAdded)
+      })
       .catch(this.setError)
   }
 
@@ -146,7 +156,7 @@ class PromotionPage extends React.Component{
       quantity: quantity.value,
       promotion_id: promotion_id,
     }
-
+    this.setState({loading: true})
     GenericApiService.saveNew(`${this.props.ROUTE}/${promotion_id}/${this.props.SUBROUTE}`, newPromotion)
       .then(this.addSubPromotion)
       .catch(this.setError)
@@ -155,16 +165,18 @@ class PromotionPage extends React.Component{
   submitEdit = (e) => {
     e.preventDefault();
     const { id, name, picture, stock, price, description } = e.target;
+    const fileName = `${Date.parse(new Date())}.${picture.files[0].name.split('.').pop()}`;
     const newPromotion = {
       name: name.value,
-      picture: picture.value,
+      picture: fileName,
       stock: stock.value,
       price: price.value,
       description: description.value
     }
 
     GenericApiService.saveExisting(this.props.ROUTE, id.value, newPromotion)
-      .then(() => this.editPromotion(id.value, newPromotion))
+      .then(() => UploadApiService.uploadImage(picture.files[0], fileName))
+      .then(res => this.editPromotion(id.value, newPromotion))
       .catch(this.setError)
   }
 
@@ -206,6 +218,7 @@ class PromotionPage extends React.Component{
       getSubAll: this.getSubAll,
       submitSubNew: this.submitSubNew,
       deleteSub: this.deleteSub,
+      loading: this.state.loading,
     }
 
     return (
