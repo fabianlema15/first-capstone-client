@@ -38,9 +38,9 @@ body {
 
 nav,
 footer {
-  /*padding: 1% 0;*/
-  background-color: #48ABEF;
+  background-color:	#009fff;
   height: 50px;
+  font-style: italic;
 }
 
 nav {
@@ -266,6 +266,20 @@ div.polaroid {
 
 div.container {
   padding-bottom: 1px;
+}
+
+.main-title {
+  top: -15px;
+  left: 8%;
+  position: relative;
+  text-align: left;
+  color: black;
+}
+
+.main-button {
+  top: -91px;
+  right: -35%;
+  position: relative;
 }
 
 @media screen and (min-width: 500px) {

@@ -2,11 +2,6 @@ import React, { Component } from 'react'
 import backArrow from '../images/back.png'
 import nextArrow from '../images/next.png'
 
-/*const arrayImgs = [
-  {desc: 'Login',
-  img: require('../../images/menu_icon.png')}
-]*/
-
 export default class NotFoundPage extends Component {
   static defaultProps = {
 		desImgs : ['Login', 'Main menu', 'List products', 'Description each item', 'Orders', 'Order detail', 'Report', 'Change password']
@@ -33,9 +28,14 @@ export default class NotFoundPage extends Component {
   }
 
   render() {
-    return (<main>
+    return (<div>
+      <nav>
+        <div className='main-title'><h1>Liquor Store App</h1></div>
+        <button className='green main-button' type='button' onClick={this.toLogin}>Log In</button>
+        {this.context.loading && <div className="loading">Loading..</div> }
+      </nav>
+      <main className='content-with-nav'>
       <section className='title-section'>
-        <h1>Liquor Store App</h1>
         <section>
           <p>This app could be used by any liquor store because this provides you with facilities to create, edit and delete products, clients, promotions (combos), and users to use the app. Also, you could control your sells getting a report by a period of time.</p>
           <div className='title-subsection'>Users can access this app depending on what role is:
@@ -54,13 +54,6 @@ export default class NotFoundPage extends Component {
             </ol>
           </div>
         </section>
-        <section>
-        <button className='blue' type='button' onClick={this.toLogin}>Log In</button>
-          <div>.</div>
-          <div className="title-box" >Demo access</div>
-          <div>User Code: 202033</div>
-          <div>Password: 202033</div>
-        </section>
       </section>
       <div>
         <h3>Screenshots</h3>
@@ -77,6 +70,7 @@ export default class NotFoundPage extends Component {
       </div>
 
       </main>
+    </div>
     )
   }
 }
